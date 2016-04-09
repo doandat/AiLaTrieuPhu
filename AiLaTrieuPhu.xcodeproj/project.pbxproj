@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90F2DBE1CB7663F005CA70C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DBD1CB7663F005CA70C /* background.png */; };
+		D90F2DBF1CB7663F005CA70C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DBD1CB7663F005CA70C /* background.png */; };
+		D90F2DC31CB767DA005CA70C /* diemcao.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC01CB767DA005CA70C /* diemcao.png */; };
+		D90F2DC41CB767DA005CA70C /* diemcao.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC01CB767DA005CA70C /* diemcao.png */; };
+		D90F2DC51CB767DA005CA70C /* gamekhac.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC11CB767DA005CA70C /* gamekhac.png */; };
+		D90F2DC61CB767DA005CA70C /* gamekhac.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC11CB767DA005CA70C /* gamekhac.png */; };
+		D90F2DC71CB767DA005CA70C /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC21CB767DA005CA70C /* rate.png */; };
+		D90F2DC81CB767DA005CA70C /* rate.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DC21CB767DA005CA70C /* rate.png */; };
+		D90F2DCD1CB7680F005CA70C /* tatam.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DCC1CB7680F005CA70C /* tatam.png */; };
+		D90F2DCE1CB7680F005CA70C /* tatam.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DCC1CB7680F005CA70C /* tatam.png */; };
+		D90F2DD01CB768A7005CA70C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DCF1CB768A7005CA70C /* start.png */; };
+		D90F2DD11CB768A7005CA70C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D90F2DCF1CB768A7005CA70C /* start.png */; };
+		D9197DE91CB75E24004FB8ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DE71CB75E24004FB8ED /* BaseViewController.m */; };
+		D9197DEA1CB75E24004FB8ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DE71CB75E24004FB8ED /* BaseViewController.m */; };
+		D9197DEB1CB75E24004FB8ED /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DE81CB75E24004FB8ED /* BaseViewController.xib */; };
+		D9197DEC1CB75E24004FB8ED /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DE81CB75E24004FB8ED /* BaseViewController.xib */; };
+		D9197DF01CB75E47004FB8ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DEE1CB75E47004FB8ED /* RootViewController.m */; };
+		D9197DF11CB75E47004FB8ED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DEE1CB75E47004FB8ED /* RootViewController.m */; };
+		D9197DF21CB75E47004FB8ED /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DEF1CB75E47004FB8ED /* RootViewController.xib */; };
+		D9197DF31CB75E47004FB8ED /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DEF1CB75E47004FB8ED /* RootViewController.xib */; };
+		D9197DF81CB75E6F004FB8ED /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DF61CB75E6F004FB8ED /* HomeViewController.m */; };
+		D9197DF91CB75E6F004FB8ED /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DF61CB75E6F004FB8ED /* HomeViewController.m */; };
+		D9197DFA1CB75E6F004FB8ED /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DF71CB75E6F004FB8ED /* HomeViewController.xib */; };
+		D9197DFB1CB75E6F004FB8ED /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9197DF71CB75E6F004FB8ED /* HomeViewController.xib */; };
+		D9197DFF1CB75ECE004FB8ED /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DFE1CB75ECE004FB8ED /* Global.m */; };
+		D9197E001CB75ECE004FB8ED /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197DFE1CB75ECE004FB8ED /* Global.m */; };
+		D9197E061CB75F31004FB8ED /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197E021CB75F31004FB8ED /* Helper.m */; };
+		D9197E071CB75F31004FB8ED /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197E021CB75F31004FB8ED /* Helper.m */; };
+		D9197E081CB75F31004FB8ED /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197E041CB75F31004FB8ED /* Lib.m */; };
+		D9197E091CB75F31004FB8ED /* Lib.m in Sources */ = {isa = PBXBuildFile; fileRef = D9197E041CB75F31004FB8ED /* Lib.m */; };
 		D9545D651CB22609005B02DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9545D641CB22609005B02DA /* Images.xcassets */; };
 		D9545D741CB22609005B02DA /* AiLaTrieuPhuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9545D731CB22609005B02DA /* AiLaTrieuPhuTests.m */; };
 		D9545D971CB228C0005B02DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9545D841CB228C0005B02DA /* AppDelegate.m */; };
@@ -34,6 +64,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D90F2DBD1CB7663F005CA70C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		D90F2DC01CB767DA005CA70C /* diemcao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diemcao.png; sourceTree = "<group>"; };
+		D90F2DC11CB767DA005CA70C /* gamekhac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamekhac.png; sourceTree = "<group>"; };
+		D90F2DC21CB767DA005CA70C /* rate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rate.png; sourceTree = "<group>"; };
+		D90F2DCC1CB7680F005CA70C /* tatam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatam.png; sourceTree = "<group>"; };
+		D90F2DCF1CB768A7005CA70C /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		D9197DE61CB75E24004FB8ED /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D9197DE71CB75E24004FB8ED /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D9197DE81CB75E24004FB8ED /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		D9197DED1CB75E47004FB8ED /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D9197DEE1CB75E47004FB8ED /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D9197DEF1CB75E47004FB8ED /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		D9197DF51CB75E6F004FB8ED /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D9197DF61CB75E6F004FB8ED /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D9197DF71CB75E6F004FB8ED /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D9197DFC1CB75ECE004FB8ED /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		D9197DFD1CB75ECE004FB8ED /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		D9197DFE1CB75ECE004FB8ED /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		D9197E011CB75F31004FB8ED /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		D9197E021CB75F31004FB8ED /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		D9197E031CB75F31004FB8ED /* Lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lib.h; sourceTree = "<group>"; };
+		D9197E041CB75F31004FB8ED /* Lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lib.m; sourceTree = "<group>"; };
+		D9197E051CB75F31004FB8ED /* MacroUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroUtilities.h; sourceTree = "<group>"; };
 		D9545D541CB22609005B02DA /* AiLaTrieuPhu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiLaTrieuPhu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9545D641CB22609005B02DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D9545D6D1CB22609005B02DA /* AiLaTrieuPhuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiLaTrieuPhuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +120,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9197DF41CB75E62004FB8ED /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9197DF51CB75E6F004FB8ED /* HomeViewController.h */,
+				D9197DF61CB75E6F004FB8ED /* HomeViewController.m */,
+				D9197DF71CB75E6F004FB8ED /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
 		D9545D4B1CB22609005B02DA = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +196,12 @@
 		D9545D7F1CB228BF005B02DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D90F2DCC1CB7680F005CA70C /* tatam.png */,
+				D90F2DBD1CB7663F005CA70C /* background.png */,
+				D90F2DC01CB767DA005CA70C /* diemcao.png */,
+				D90F2DC11CB767DA005CA70C /* gamekhac.png */,
+				D90F2DC21CB767DA005CA70C /* rate.png */,
+				D90F2DCF1CB768A7005CA70C /* start.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -171,6 +240,7 @@
 		D9545D851CB228C0005B02DA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9197DF41CB75E62004FB8ED /* HomeViewController */,
 				D9545D861CB228C0005B02DA /* BaseViewController */,
 				D9545D871CB228C0005B02DA /* RootViewController */,
 				D9545D881CB228C0005B02DA /* ViewController.h */,
@@ -182,6 +252,9 @@
 		D9545D861CB228C0005B02DA /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9197DE61CB75E24004FB8ED /* BaseViewController.h */,
+				D9197DE71CB75E24004FB8ED /* BaseViewController.m */,
+				D9197DE81CB75E24004FB8ED /* BaseViewController.xib */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -189,6 +262,9 @@
 		D9545D871CB228C0005B02DA /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9197DED1CB75E47004FB8ED /* RootViewController.h */,
+				D9197DEE1CB75E47004FB8ED /* RootViewController.m */,
+				D9197DEF1CB75E47004FB8ED /* RootViewController.xib */,
 			);
 			path = RootViewController;
 			sourceTree = "<group>";
@@ -196,6 +272,9 @@
 		D9545D8A1CB228C0005B02DA /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				D9197DFC1CB75ECE004FB8ED /* config.h */,
+				D9197DFD1CB75ECE004FB8ED /* Global.h */,
+				D9197DFE1CB75ECE004FB8ED /* Global.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -203,6 +282,11 @@
 		D9545D8B1CB228C0005B02DA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D9197E011CB75F31004FB8ED /* Helper.h */,
+				D9197E021CB75F31004FB8ED /* Helper.m */,
+				D9197E031CB75F31004FB8ED /* Lib.h */,
+				D9197E041CB75F31004FB8ED /* Lib.m */,
+				D9197E051CB75F31004FB8ED /* MacroUtilities.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -327,9 +411,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9545D9F1CB228C0005B02DA /* Info.plist in Resources */,
+				D90F2DBE1CB7663F005CA70C /* background.png in Resources */,
+				D90F2DC51CB767DA005CA70C /* gamekhac.png in Resources */,
+				D90F2DC31CB767DA005CA70C /* diemcao.png in Resources */,
+				D9197DEB1CB75E24004FB8ED /* BaseViewController.xib in Resources */,
+				D9197DF21CB75E47004FB8ED /* RootViewController.xib in Resources */,
 				D9545D9D1CB228C0005B02DA /* Main.storyboard in Resources */,
 				D9545D9B1CB228C0005B02DA /* LaunchScreen.xib in Resources */,
+				D90F2DC71CB767DA005CA70C /* rate.png in Resources */,
+				D9197DFA1CB75E6F004FB8ED /* HomeViewController.xib in Resources */,
 				D9545D651CB22609005B02DA /* Images.xcassets in Resources */,
+				D90F2DCD1CB7680F005CA70C /* tatam.png in Resources */,
+				D90F2DD01CB768A7005CA70C /* start.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,9 +430,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90F2DCE1CB7680F005CA70C /* tatam.png in Resources */,
+				D90F2DC41CB767DA005CA70C /* diemcao.png in Resources */,
+				D90F2DC81CB767DA005CA70C /* rate.png in Resources */,
 				D9545D9C1CB228C0005B02DA /* LaunchScreen.xib in Resources */,
+				D9197DEC1CB75E24004FB8ED /* BaseViewController.xib in Resources */,
+				D90F2DBF1CB7663F005CA70C /* background.png in Resources */,
+				D9197DF31CB75E47004FB8ED /* RootViewController.xib in Resources */,
 				D9545D9E1CB228C0005B02DA /* Main.storyboard in Resources */,
+				D90F2DC61CB767DA005CA70C /* gamekhac.png in Resources */,
 				D9545DA01CB228C0005B02DA /* Info.plist in Resources */,
+				D90F2DD11CB768A7005CA70C /* start.png in Resources */,
+				D9197DFB1CB75E6F004FB8ED /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,9 +452,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9197E081CB75F31004FB8ED /* Lib.m in Sources */,
 				D9545D991CB228C0005B02DA /* ViewController.m in Sources */,
+				D9197DE91CB75E24004FB8ED /* BaseViewController.m in Sources */,
 				D9545DA11CB228C0005B02DA /* main.m in Sources */,
+				D9197E061CB75F31004FB8ED /* Helper.m in Sources */,
+				D9197DFF1CB75ECE004FB8ED /* Global.m in Sources */,
 				D9545D971CB228C0005B02DA /* AppDelegate.m in Sources */,
+				D9197DF01CB75E47004FB8ED /* RootViewController.m in Sources */,
+				D9197DF81CB75E6F004FB8ED /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +469,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9545D9A1CB228C0005B02DA /* ViewController.m in Sources */,
+				D9197DEA1CB75E24004FB8ED /* BaseViewController.m in Sources */,
+				D9197DF11CB75E47004FB8ED /* RootViewController.m in Sources */,
 				D9545D981CB228C0005B02DA /* AppDelegate.m in Sources */,
+				D9197E001CB75ECE004FB8ED /* Global.m in Sources */,
 				D9545DA21CB228C0005B02DA /* main.m in Sources */,
+				D9197DF91CB75E6F004FB8ED /* HomeViewController.m in Sources */,
+				D9197E091CB75F31004FB8ED /* Lib.m in Sources */,
+				D9197E071CB75F31004FB8ED /* Helper.m in Sources */,
 				D9545D741CB22609005B02DA /* AiLaTrieuPhuTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

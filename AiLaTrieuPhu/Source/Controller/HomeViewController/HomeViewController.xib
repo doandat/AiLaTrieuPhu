@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-YL-Hmf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-Wl-LBZ">
+                    <rect key="frame" x="220" y="445" width="100" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="5y7-Uq-jWc"/>
+                        <constraint firstAttribute="width" constant="100" id="XSh-2U-Uab"/>
+                    </constraints>
+                    <state key="normal" image="gamekhac.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9A-1I-oAm">
+                    <rect key="frame" x="0.0" y="445" width="100" height="54"/>
+                    <state key="normal" image="diemcao.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qb3-gN-hy9">
+                    <rect key="frame" x="0.0" y="23" width="120" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="4YK-Xh-TwW"/>
+                        <constraint firstAttribute="width" constant="120" id="A2q-L5-wIS"/>
+                    </constraints>
+                    <state key="normal" image="tatam.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-cF-m30">
+                    <rect key="frame" x="78" y="472" width="164" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="67j-tP-YoO"/>
+                        <constraint firstAttribute="width" constant="164" id="Fz0-Ef-fM9"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="QJf-5W-INC"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="f7v-WR-EGz"/>
+                    </constraints>
+                    <state key="normal" image="start.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP5-nF-Ysg">
+                    <rect key="frame" x="78" y="422" width="164" height="50"/>
+                    <state key="normal" image="rate.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="k9A-1I-oAm" firstAttribute="centerY" secondItem="dhq-Wl-LBZ" secondAttribute="centerY" id="6b8-4L-jy1"/>
+                <constraint firstItem="rP5-nF-Ysg" firstAttribute="width" secondItem="FN5-cF-m30" secondAttribute="width" id="9ae-M7-V0t"/>
+                <constraint firstItem="rP5-nF-Ysg" firstAttribute="height" secondItem="FN5-cF-m30" secondAttribute="height" id="CPq-sA-HBd"/>
+                <constraint firstItem="FN5-cF-m30" firstAttribute="top" secondItem="rP5-nF-Ysg" secondAttribute="bottom" id="CeK-fU-Bbt"/>
+                <constraint firstItem="rP5-nF-Ysg" firstAttribute="centerX" secondItem="dhq-Wl-LBZ" secondAttribute="centerX" constant="-110" id="Cnv-wf-B4Y"/>
+                <constraint firstItem="qb3-gN-hy9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="Dur-rL-f64"/>
+                <constraint firstItem="rP5-nF-Ysg" firstAttribute="centerY" secondItem="dhq-Wl-LBZ" secondAttribute="centerY" constant="-25" id="ETZ-hr-z31"/>
+                <constraint firstItem="k9A-1I-oAm" firstAttribute="width" secondItem="dhq-Wl-LBZ" secondAttribute="width" id="bq1-2c-6Nu"/>
+                <constraint firstItem="rP5-nF-Ysg" firstAttribute="centerX" secondItem="k9A-1I-oAm" secondAttribute="centerX" constant="110" id="cIk-fM-2nY"/>
+                <constraint firstAttribute="bottom" secondItem="FN5-cF-m30" secondAttribute="bottom" constant="46" id="f40-17-IVH"/>
+                <constraint firstAttribute="trailing" secondItem="g4a-YL-Hmf" secondAttribute="trailing" id="foM-vD-Dsi"/>
+                <constraint firstAttribute="bottom" secondItem="g4a-YL-Hmf" secondAttribute="bottom" id="grJ-xh-R7C"/>
+                <constraint firstAttribute="centerX" secondItem="FN5-cF-m30" secondAttribute="centerX" id="hNh-oz-qEd"/>
+                <constraint firstAttribute="centerX" secondItem="FN5-cF-m30" secondAttribute="centerX" id="l21-cG-NFe"/>
+                <constraint firstItem="qb3-gN-hy9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nIN-2d-xmE"/>
+                <constraint firstAttribute="centerX" secondItem="rP5-nF-Ysg" secondAttribute="centerX" id="ony-U6-QF9"/>
+                <constraint firstItem="k9A-1I-oAm" firstAttribute="height" secondItem="dhq-Wl-LBZ" secondAttribute="height" id="sUj-Ed-1aL"/>
+                <constraint firstItem="g4a-YL-Hmf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="woq-eE-e9s"/>
+                <constraint firstItem="g4a-YL-Hmf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zDb-qB-Lld"/>
+            </constraints>
+            <point key="canvasLocation" x="289" y="341"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background.png" width="800" height="1280"/>
+        <image name="diemcao.png" width="219" height="137"/>
+        <image name="gamekhac.png" width="220" height="137"/>
+        <image name="rate.png" width="419" height="133"/>
+        <image name="start.png" width="441" height="137"/>
+        <image name="tatam.png" width="238" height="108"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

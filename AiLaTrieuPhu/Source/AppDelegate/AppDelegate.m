@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Global.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Global share];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    RootViewController *rootVC = [[RootViewController alloc]initWithNibName:@"RootViewController" bundle:nil];
+    self.window.rootViewController = rootVC;
+    self.window.backgroundColor = NAVIGATIONBAR_COLOR;
+    [self.window makeKeyAndVisible];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"aaaa:%@",[paths objectAtIndex:0]);
     return YES;
 }
 
