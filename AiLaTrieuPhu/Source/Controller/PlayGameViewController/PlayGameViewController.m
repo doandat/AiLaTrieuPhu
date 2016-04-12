@@ -183,6 +183,18 @@
 //        timer = nil;
         btnAnswer1.backgroundColor = [UIColor blueColor];
         loopCount = 0;
+        [UIView animateWithDuration:2
+                         animations:^{
+                             CGRect frame = viewLevel.frame;
+                             frame.origin.x = 0;
+                             viewLevel.frame = frame;
+                         }
+                         completion:^(BOOL finished){
+                             NSLog(@"Done!");
+                             [self setLayoutFirst];
+                         }];
+
+        
     }else{
         if (checkChange) {
             btnAnswer1.backgroundColor = [UIColor redColor];
@@ -193,5 +205,25 @@
         }
         loopCount++;
     }
+}
+
+- (void)setLayoutFirst{
+    
+    constraintCenterAnswer1.constant = constraintCenterAnswer3.constant = -self.widthMainScreen;
+    
+    constraintCenterAnswer2.constant = constraintCenterAnswer4.constant = self.widthMainScreen;
+    
+    //    CGRect frameViewQuestion = viewQuestion.frame;
+    //    frameViewQuestion.size.width = 0;
+    //    viewQuestion.frame = frameViewQuestion;
+    
+    constraintWidthViewQuestion.constant = 0;
+    constraintCenterViewQuestion.constant = -self.widthMainScreen;
+    
+    [btnAnswer1 addTarget:self action:@selector(btnAnswer1:) forControlEvents:UIControlEventTouchUpInside];
+    [btnAnswer2 addTarget:self action:@selector(btnAnswer2:) forControlEvents:UIControlEventTouchUpInside];
+    [btnAnswer3 addTarget:self action:@selector(btnAnswer3:) forControlEvents:UIControlEventTouchUpInside];
+    [btnAnswer4 addTarget:self action:@selector(btnAnswer4:) forControlEvents:UIControlEventTouchUpInside];
+
 }
 @end
