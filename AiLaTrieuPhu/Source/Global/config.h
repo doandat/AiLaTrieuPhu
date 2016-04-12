@@ -9,69 +9,44 @@
 #ifndef config_h
 #define config_h
 
-#define URL_GET_CATEGORY @"http://apipic.yome.vn/api/picture-v2/get-category-list"
-#define URL_GET_EFFECT_LIST @"http://apipic.yome.vn/api/picture-v2/get-effect-list"
-#define URL_GET_NEWS_LIST @"http://apipic.yome.vn/api/picture-v2/get-new-list"
-#define URL_GET_HOT_LIST @"http://pic.yome.vn/api/picture-v2/get-hot-list"
 
-#define URL_CREATE_PICTURE @"http://apipic.yome.vn/api/picture-v2/create-picture?"
-#define URL_GET_CATEGORY_THEME @"http://apipic.yome.vn/api/theme/get-category-list"
-#define URL_GET_MORE_APP @"http://apipic.yome.vn/api/get-game-list/v1"
-#define URL_GET_THEME @"http://apipic.yome.vn/api/theme/get-theme-list"
+//URL
+
+#define URL_HOST                @"http://content.amobi.vn/"
+#define URL_GET_QUESTION        @"http://content.amobi.vn/api/quizgame"
+
+
 
 // parameters
-#define p_category_id @"category_id"
 
+#define PAR_APP_ID              @"app_id"
+#define PAR_TYPE                @"type"
+#define PAR_LEVEL               @"level"
+#define PAR_CATEGORY            @"category"
+#define PAR_LIMIT               @"limit"
+#define PAR_USER                @"user_name"
+#define PAR_PASSWORD            @"password"
 
-#define PAR_FUNCTION @"function"
-#define LINE_1 @"line_1"
-#define LINE_2 @"line_2"
-#define LINE_3 @"line_3"
-#define LINE_4 @"line_4"
-#define LINE_5 @"line_5"
-#define LINE_6 @"line_6"
-#define LINE_7 @"line_7"
-#define LINE_8 @"line_8"
-#define LINE_9 @"line_9"
-#define LINE_10 @"line_10"
-#define PICTURE_1 @"picture_1"
-#define PICTURE_2 @"picture_2"
-#define PICTURE_3 @"picture_3"
-#define PICTURE_4 @"picture_4"
-#define PICTURE_5 @"picture_5"
-#define PICTURE_6 @"picture_6"
-#define PICTURE_7 @"picture_7"
-#define PICTURE_8 @"picture_8"
-#define PICTURE_9 @"picture_9"
-#define PICTURE_10 @"picture_10"
+#define V_APP_ID                @"832799120072886"
+#define V_TYPE                  @"get-data"
+#define V_USER                  @"amobi"
+#define V_PASSWORD              @"amobi@#123"
 
-
-
-
-#define PAR_PAGE @"page"
-#define PAR_NUMBER @"number"
-#define PAR_ID @"id"
-
-// keys
-#define k_category_list @"category_list"
-#define k_id @"id"
-#define k_name @"name"
-#define k_effect_list @"effect_list"
-#define k_label @"label"
-#define k_description @"description"
-#define k_function @"function"
-#define k_avatar @"avatar"
-#define k_input_line @"input_line"
-#define k_type @"type"
-#define k_title @"title"
-#define k_require @"require"
-#define k_input_picture @"input_picture"
-#define k_width @"width"
-#define k_height @"height"
-#define k_icon @"icon"
-#define k_link @"link"
-#define k_thumb @"thumb"
-#define k_theme_list @"theme_list"
+//Key
+#define K_STATUS                @"status"
+#define K_MESSAGE               @"message"
+#define K_DATA                  @"data"
+#define K_QUESTION              @"question"
+#define K_ANSWER_1              @"answer_1"
+#define K_ANSWER_2              @"answer_2"
+#define K_ANSWER_3              @"answer_3"
+#define K_ANSWER_4              @"answer_4"
+#define K_ANSWER_TRUE           @"answer_true"
+#define K_QUESTION_AUDIO        @"question_audio"
+#define K_ANSWER_1_AUDIO        @"answer_1_audio"
+#define K_ANSWER_2_AUDIO        @"answer_2_audio"
+#define K_ANSWER_3_AUDIO        @"answer_3_audio"
+#define K_ANSWER_4_AUDIO        @"answer_4_audio"
 
 
 //backgroudcolor

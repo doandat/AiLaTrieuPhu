@@ -17,6 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.widthMainScreen = [UIScreen mainScreen].bounds.size.width;
+    self.heightMainScreen = [UIScreen mainScreen].bounds.size.height;
+    
+    [self loadData];
+    
+}
+
+- (void)loadData{
+    /**
+     *  Test request data
+     */
+    NSArray *arrQuestion = [AppService getQuestionWithCategory:@"" level:@"1" limit:@"20"];
+    NSLog(@"finish:%@",arrQuestion);
+
 }
 
 - (void)didReceiveMemoryWarning {

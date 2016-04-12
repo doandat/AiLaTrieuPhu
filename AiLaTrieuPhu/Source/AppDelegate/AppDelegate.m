@@ -19,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Global share];
+    application.statusBarHidden = YES;
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     RootViewController *rootVC = [[RootViewController alloc]initWithNibName:@"RootViewController" bundle:nil];
     self.window.rootViewController = rootVC;
@@ -26,6 +28,10 @@
     [self.window makeKeyAndVisible];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSLog(@"aaaa:%@",[paths objectAtIndex:0]);
+    
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+
+    
     return YES;
 }
 
@@ -51,4 +57,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 @end
