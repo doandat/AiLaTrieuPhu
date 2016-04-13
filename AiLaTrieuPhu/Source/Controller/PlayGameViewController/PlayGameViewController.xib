@@ -21,6 +21,14 @@
                 <outlet property="constraintHeightViewQuestion" destination="YUv-ui-sNZ" id="muJ-6X-8b5"/>
                 <outlet property="constraintTopAnswer1" destination="UB3-YS-ppx" id="hvT-xr-k19"/>
                 <outlet property="constraintWidthViewQuestion" destination="aDq-9W-lEe" id="2ly-cM-8vm"/>
+                <outlet property="imageAnswer1" destination="BS2-dx-C6b" id="ZnS-hS-dHS"/>
+                <outlet property="imageAnswer2" destination="CPz-9c-q17" id="Pgu-O5-VwW"/>
+                <outlet property="imageAnswer3" destination="Hn8-2U-XzB" id="RyB-ID-N15"/>
+                <outlet property="imageAnswer4" destination="cnt-YM-HXV" id="RdI-YS-dmm"/>
+                <outlet property="lbAnswer1" destination="U8P-qT-CNp" id="FLd-dN-tfD"/>
+                <outlet property="lbAnswer2" destination="TIb-pe-gmw" id="dYr-ws-ceX"/>
+                <outlet property="lbAnswer3" destination="em7-hn-YZR" id="NMt-oM-ppb"/>
+                <outlet property="lbAnswer4" destination="rW0-Bg-C7j" id="K3d-DA-9L7"/>
                 <outlet property="subViewQuestion" destination="I4G-3r-cNC" id="GUp-Bz-Pr2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewAnswer1" destination="xCm-lV-04k" id="7G9-Nj-IVY"/>
@@ -250,15 +258,15 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ri2-og-pav" userLabel="ViewAnswer3">
                             <rect key="frame" x="20" y="115" width="264" height="35"/>
                             <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_room_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-2U-XzB">
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu 3:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em7-hn-YZR">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_room_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-2U-XzB">
-                                    <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq5-Jo-tBI">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
                                     <state key="normal">
@@ -285,15 +293,15 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKx-wH-QOf" userLabel="ViewAnswer4">
                             <rect key="frame" x="20" y="170" width="264" height="35"/>
                             <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_room_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-YM-HXV">
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu 4:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW0-Bg-C7j">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_room_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-YM-HXV">
-                                    <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLE-ar-9XQ">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
                                     <state key="normal">

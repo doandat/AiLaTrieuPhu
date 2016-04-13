@@ -9,7 +9,9 @@
 #import "HomeViewController.h"
 #import "PlayGameViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+    AVAudioPlayer* audioPlayer;
+}
 
 @end
 
@@ -21,6 +23,24 @@
     [self.navigationController setNavigationBarHidden:YES];
     [self.btnStart addTarget:self action:@selector(btnStart:) forControlEvents:UIControlEventTouchUpInside];
     
+
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"bgmusic" ofType:@"mp3"];
+    NSURL* file = [NSURL fileURLWithPath:path];
+    // thanks @gebirgsbaerbel
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:nil];
+    [audioPlayer prepareToPlay];
+    if ([audioPlayer isPlaying]) {
+        [audioPlayer pause];
+    } else {
+        [audioPlayer play];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +51,10 @@
 - (void)btnStart:(id)sender{
     PlayGameViewController *playGameVC = [[PlayGameViewController alloc]initWithNibName:@"PlayGameViewController" bundle:nil];
     [self.navigationController pushViewController:playGameVC animated:YES];
+    
+    if ([audioPlayer isPlaying]) {
+        [audioPlayer pause];
+    }
 }
 
 /*

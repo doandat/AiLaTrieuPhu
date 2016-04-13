@@ -43,11 +43,31 @@
     __weak IBOutlet UIButton *btnAnswer3;
     __weak IBOutlet UIButton *btnAnswer4;
     
+    __weak IBOutlet UIImageView *imageAnswer1;
+    __weak IBOutlet UIImageView *imageAnswer2;
+    __weak IBOutlet UIImageView *imageAnswer3;
+    __weak IBOutlet UIImageView *imageAnswer4;
+    
+    __weak IBOutlet UILabel *lbAnswer1;
+    __weak IBOutlet UILabel *lbAnswer2;
+    __weak IBOutlet UILabel *lbAnswer3;
+    __weak IBOutlet UILabel *lbAnswer4;
+    
+    
+    
     BOOL checkChange;
     NSInteger loopCount;
     NSTimer *timer;
+    NSString *indexAnswerTrue;
+    NSInteger indexQuestionNext;
+    BOOL isReady;
+//    AVAudioPlayer* audioPlayer;
     
 }
+@property (nonatomic, strong) AFSoundPlayback *playback;
+@property (nonatomic, strong) AFSoundQueue *queue;
+
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -82,6 +102,11 @@
 
     checkChange = YES;
     loopCount = 0;
+    indexAnswerTrue = @"1";
+    isReady = NO;
+    indexQuestionNext = 0;
+    
+    
 
 }
 
@@ -101,7 +126,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [UIView animateWithDuration:2
+    [UIView animateWithDuration:1
                      animations:^{
                          CGRect frame = viewLevel.frame;
                          frame.origin.x = 0;
@@ -110,6 +135,29 @@
                      completion:^(BOOL finished){
                          NSLog(@"Done!");
                      }];
+    
+    AFSoundItem *item1 = [[AFSoundItem alloc] initWithLocalResource:@"luatchoi_b.mp3" atPath:nil];
+    AFSoundItem *item2 = [[AFSoundItem alloc] initWithLocalResource:@"ready.mp3" atPath:nil];
+
+    
+    _items = [NSMutableArray arrayWithObjects:item1,item2, nil];
+    _queue = [[AFSoundQueue alloc] initWithItems:_items];
+    [_queue playCurrentItem];
+    
+    [_queue listenFeedbackUpdatesWithBlock:^(AFSoundItem *item) {
+        
+        NSLog(@"Item duration: %ld - time elapsed: %ld", (long)item.duration, (long)item.timePlayed);
+    } andFinishedBlock:^(AFSoundItem *nextItem) {
+        if (!nextItem) {
+            [_queue pause];
+            [_queue clearQueue];
+            [self dismissViewFifteenQuestion:indexQuestionNext];
+            
+        }
+        NSLog(@"Finished item, next one is %@", nextItem.title);
+    }];
+
+
 }
 
 
@@ -121,91 +169,281 @@
 - (void) tapDismissViewLevel: (UITapGestureRecognizer *)recognizer
 {
     //Code to handle the gesture
-    [UIView animateWithDuration:2
+    isReady = YES;
+    [self dismissViewFifteenQuestion:indexQuestionNext];
+}
+
+#pragma mark dismiss view fifteen question
+-(void)dismissViewFifteenQuestion:(NSInteger)indexQuestion{
+    [UIView animateWithDuration:1
                      animations:^{
                          CGRect frame = viewLevel.frame;
                          frame.origin.x = -self.widthMainScreen;
                          viewLevel.frame = frame;
-//                         constraintCenterAnswer1.constant = constraintCenterAnswer3.constant = constraintCenterAnswer2.constant = constraintCenterAnswer4.constant = 0;
+                         //                         constraintCenterAnswer1.constant = constraintCenterAnswer3.constant = constraintCenterAnswer2.constant = constraintCenterAnswer4.constant = 0;
                          
                      }
                      completion:^(BOOL finished){
                          NSLog(@"Done!");
-                         [UIView animateWithDuration:1
-                                          animations:^{
-//                                              CGRect frameViewQuestion = viewQuestion.frame;
-//                                              frameViewQuestion.size.width = 0;
-//                                              viewQuestion.frame = frameViewQuestion;
-                                              
-                                              constraintWidthViewQuestion.constant = self.widthMainScreen;
+                         if (isReady) {
+                              [_queue pause];
+                              [_queue clearQueue];
 
-                                              
-                                              constraintCenterViewQuestion.constant = 0;
-                                              constraintCenterAnswer1.constant = constraintCenterAnswer3.constant = constraintCenterAnswer2.constant = constraintCenterAnswer4.constant = 0;
-                                              [self.view layoutIfNeeded];
-                                              
-                                          }
-                                          completion:^(BOOL finished){
-                                              NSLog(@"Done!");
-                                          }];
+                             [self setSoundQuestionNext:indexQuestionNext];
+                             [UIView animateWithDuration:1
+                                              animations:^{
+                                                  constraintWidthViewQuestion.constant = self.widthMainScreen;
+                                                  constraintCenterViewQuestion.constant = 0;
+                                                  constraintCenterAnswer1.constant = constraintCenterAnswer3.constant = constraintCenterAnswer2.constant = constraintCenterAnswer4.constant = 0;
+                                                  [self.view layoutIfNeeded];
+                                                  
+                                              }
+                                              completion:^(BOOL finished){
+                                                  NSLog(@"Done!");
+//                                                  [_queue pause];
+//                                                  [_queue clearQueue];
+                                                  
+                                              }];
+                         }else{
+                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message"
+                                                                             message:@"Bạn đã sẵn sàng chơi?."
+                                                                            delegate:self
+                                                                   cancelButtonTitle:@"Huỷ bỏ"
+                                                                   otherButtonTitles:@"Đồng ý",nil];
+                             [alert show];
 
+                         }
+                         
                      }];
+
 }
 
+#pragma mark set sound question next
+-(void)setSoundQuestionNext:(NSInteger )indexQuestion{
+    if (indexQuestion == 0) {
+        
+        AFSoundItem *item1 = [[AFSoundItem alloc] initWithLocalResource:@"gofind.mp3" atPath:nil];
+        AFSoundItem *item2 = [[AFSoundItem alloc] initWithLocalResource:@"ques1.mp3" atPath:nil];
+        
+        
+        _items = [NSMutableArray arrayWithObjects:item1,item2, nil];
+        _queue = [[AFSoundQueue alloc] initWithItems:_items];
+        [_queue playCurrentItem];
+        
+        [_queue listenFeedbackUpdatesWithBlock:^(AFSoundItem *item) {
+            
+            NSLog(@"Item duration: %ld - time elapsed: %ld", (long)item.duration, (long)item.timePlayed);
+        } andFinishedBlock:^(AFSoundItem *nextItem) {
+            if (!nextItem) {
+                [_queue pause];
+                [_queue clearQueue];
+//                [self dismissViewFifteenQuestion:indexQuestionNext];
+                
+            }
+            NSLog(@"Finished item, next one is %@", nextItem.title);
+        }];
+    }
+}
 #pragma mark action button answer
 - (void)btnAnswer1:(id)sender{
     timer = [NSTimer scheduledTimerWithTimeInterval: 0.1
                                              target: self
-                                           selector: @selector(handleTimer)
-                                           userInfo: nil
+                                           selector: @selector(handleTimer:)
+                                           userInfo:@"1"
                                             repeats: YES];
 }
 
 - (void)btnAnswer2:(id)sender{
-    
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.1
+                                             target: self
+                                           selector: @selector(handleTimer:)
+                                           userInfo:@"2"
+                                            repeats: YES];
+
 }
 
 - (void)btnAnswer3:(id)sender{
-    
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.1
+                                             target: self
+                                           selector: @selector(handleTimer:)
+                                           userInfo:@"3"
+                                            repeats: YES];
+
 }
 
 - (void)btnAnswer4:(id)sender{
+    timer = [NSTimer scheduledTimerWithTimeInterval: 0.1
+                                             target: self
+                                           selector: @selector(handleTimer:)
+                                           userInfo:@"4"
+                                            repeats: YES];
+
+}
+
+- (void)handleTimer:(NSTimer*)theTimer{
+    NSLog (@"Got the string: %@", (NSString*)[theTimer userInfo]);
+    NSString *btnStringSelected = (NSString*)[theTimer userInfo];
+    if ([btnStringSelected isEqualToString:indexAnswerTrue]) {
+        [self changeStateAnswerTrue];
+    }else{
+        [self changeStateAnswerFail:btnStringSelected];
+        [self changeStateAnswerTrue];
+        
+    }
     
 }
 
-- (void)handleTimer{
-    if (loopCount >= 20) {
-        if (timer) {
-            [timer invalidate];
-            timer = nil;
-        }
-//        [timer invalidate];
-//        timer = nil;
-        btnAnswer1.backgroundColor = [UIColor blueColor];
-        loopCount = 0;
-        [UIView animateWithDuration:2
-                         animations:^{
-                             CGRect frame = viewLevel.frame;
-                             frame.origin.x = 0;
-                             viewLevel.frame = frame;
-                         }
-                         completion:^(BOOL finished){
-                             NSLog(@"Done!");
-                             [self setLayoutFirst];
-                         }];
+#pragma mark config state answer true
 
-        
+- (void)changeStateAnswer1True{
+    if (checkChange) {
+        [imageAnswer1 setImage:IMAGE_ANSWER_TRUE_1];
+        checkChange = NO;
     }else{
-        if (checkChange) {
-            btnAnswer1.backgroundColor = [UIColor redColor];
-            checkChange = NO;
-        }else{
-            btnAnswer1.backgroundColor = [UIColor greenColor];
-            checkChange = YES;
-        }
-        loopCount++;
+        [imageAnswer1 setImage:IMAGE_ANSWER_TRUE_2];
+        checkChange = YES;
     }
 }
+
+- (void)changeStateAnswer2True{
+    if (checkChange) {
+        [imageAnswer2 setImage:IMAGE_ANSWER_TRUE_1];
+        checkChange = NO;
+    }else{
+        [imageAnswer2 setImage:IMAGE_ANSWER_TRUE_2];
+        checkChange = YES;
+    }
+}
+
+- (void)changeStateAnswer3True{
+    if (checkChange) {
+        [imageAnswer3 setImage:IMAGE_ANSWER_TRUE_1];
+        checkChange = NO;
+    }else{
+        [imageAnswer3 setImage:IMAGE_ANSWER_TRUE_2];
+        checkChange = YES;
+    }
+}
+
+- (void)changeStateAnswer4True{
+    if (checkChange) {
+        [imageAnswer4 setImage:IMAGE_ANSWER_TRUE_1];
+        checkChange = NO;
+    }else{
+        [imageAnswer4 setImage:IMAGE_ANSWER_TRUE_2];
+        checkChange = YES;
+    }
+}
+
+- (void)changeStateAnswerTrue{
+    if ([indexAnswerTrue isEqualToString:@"1"]) {
+        if (loopCount >= 20) {
+            if (timer) {
+                [timer invalidate];
+                timer = nil;
+            }
+            loopCount = 0;
+            [UIView animateWithDuration:2
+                             animations:^{
+                                 CGRect frame = viewLevel.frame;
+                                 frame.origin.x = 0;
+                                 viewLevel.frame = frame;
+                             }
+                             completion:^(BOOL finished){
+                                 NSLog(@"Done!");
+                                 [self setLayoutFirst];
+                             }];
+            
+            
+        }else{
+            [self changeStateAnswer1True];
+            loopCount++;
+        }
+    }else if([indexAnswerTrue isEqualToString:@"2"]){
+        if (loopCount >= 20) {
+            if (timer) {
+                [timer invalidate];
+                timer = nil;
+            }
+            loopCount = 0;
+            [UIView animateWithDuration:2
+                             animations:^{
+                                 CGRect frame = viewLevel.frame;
+                                 frame.origin.x = 0;
+                                 viewLevel.frame = frame;
+                             }
+                             completion:^(BOOL finished){
+                                 NSLog(@"Done!");
+                                 [self setLayoutFirst];
+                             }];
+            
+            
+        }else{
+            [self changeStateAnswer2True];
+            loopCount++;
+        }
+    }else if([indexAnswerTrue isEqualToString:@"3"]){
+        if (loopCount >= 20) {
+            if (timer) {
+                [timer invalidate];
+                timer = nil;
+            }
+            loopCount = 0;
+            [UIView animateWithDuration:2
+                             animations:^{
+                                 CGRect frame = viewLevel.frame;
+                                 frame.origin.x = 0;
+                                 viewLevel.frame = frame;
+                             }
+                             completion:^(BOOL finished){
+                                 NSLog(@"Done!");
+                                 [self setLayoutFirst];
+                             }];
+            
+            
+        }else{
+            [self changeStateAnswer3True];
+            loopCount++;
+        }
+    }else if([indexAnswerTrue isEqualToString:@"4"]){
+        if (loopCount >= 20) {
+            if (timer) {
+                [timer invalidate];
+                timer = nil;
+            }
+            loopCount = 0;
+            [UIView animateWithDuration:2
+                             animations:^{
+                                 CGRect frame = viewLevel.frame;
+                                 frame.origin.x = 0;
+                                 viewLevel.frame = frame;
+                             }
+                             completion:^(BOOL finished){
+                                 NSLog(@"Done!");
+                                 [self setLayoutFirst];
+                             }];
+            
+            
+        }else{
+            [self changeStateAnswer4True];
+            loopCount++;
+        }
+    }
+}
+
+#pragma mark config state answer fail
+- (void)changeStateAnswerFail:(NSString *)indexButton{
+    if ([indexButton isEqualToString:@"1"]) {
+        [imageAnswer1 setImage:IMAGE_ANSWER_FAIL];
+    }else if ([indexButton isEqualToString:@"2"]){
+        [imageAnswer2 setImage:IMAGE_ANSWER_FAIL];
+    }else if ([indexButton isEqualToString:@"3"]){
+        [imageAnswer3 setImage:IMAGE_ANSWER_FAIL];
+    }else if ([indexButton isEqualToString:@"4"]){
+        [imageAnswer4 setImage:IMAGE_ANSWER_FAIL];
+    }
+}
+
 
 - (void)setLayoutFirst{
     
@@ -224,6 +462,11 @@
     [btnAnswer2 addTarget:self action:@selector(btnAnswer2:) forControlEvents:UIControlEventTouchUpInside];
     [btnAnswer3 addTarget:self action:@selector(btnAnswer3:) forControlEvents:UIControlEventTouchUpInside];
     [btnAnswer4 addTarget:self action:@selector(btnAnswer4:) forControlEvents:UIControlEventTouchUpInside];
+    [imageAnswer1 setImage:IMAGE_BACKGROUND_ANSWER];
+    [imageAnswer2 setImage:IMAGE_BACKGROUND_ANSWER];
+    [imageAnswer3 setImage:IMAGE_BACKGROUND_ANSWER];
+    [imageAnswer4 setImage:IMAGE_BACKGROUND_ANSWER];
+
 
 }
 @end

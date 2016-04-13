@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "AFSoundManager.h"
 
 #import "config.h"
 #import "Question.h"

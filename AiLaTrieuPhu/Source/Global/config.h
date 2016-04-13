@@ -57,6 +57,14 @@
 #define SEPARATOR_COLOR  [UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]
 
 //image
+#define IMAGE_BACKGROUND_ANSWER     [UIImage imageNamed:@"dialog_btn_0.png"]
+#define IMAGE_ANSWER_TRUE_1         [UIImage imageNamed:@"dialog_btn_0.png"]
+#define IMAGE_ANSWER_TRUE_2         [UIImage imageNamed:@"dialog_btn_1.png"]
+#define IMAGE_ANSWER_FAIL           [UIImage imageNamed:@"btn_answer_fail.png"]
+
+
+
+////
 #define IMAGE_BACK                  [UIImage imageNamed:@"btn_back.png"]
 #define IMAGE_CLOSE                 [UIImage imageNamed:@"close.png"]
 #define IMAGE_FAVORITE              [UIImage imageNamed:@"favorite.png"]
